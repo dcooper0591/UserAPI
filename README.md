@@ -3,8 +3,8 @@
 Installation Instructions:
 
 - If using a database server other than local [(localdb)\\mssqllocaldb] change appsettings.json to reflect the new server
-- Run CreateDatabase.sql located in the project
-- Run CreateTable.sql located in the project
+- Run FSPUserApi/CreateDatabase.sql located in the project
+- Run FSPUserApi/CreateTable.sql located in the project
 
 
 Information:
