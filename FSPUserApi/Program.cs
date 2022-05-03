@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+//Using Dependency Injection
 builder.Services.AddScoped<UserManager>();
 builder.Services.AddScoped<DatabaseManager>();
 builder.Services.AddDbContext<UserDbContext>(options =>

@@ -20,22 +20,34 @@ namespace FSPUserApi.Validations
                 throw new ValidationException("User Id was not specified. Please provide an id");
             }
         }
-
-        public static void ValidateUserInfo(string firstName, string lastName, string email)
+        public static void ValidateFirstName(string firstName)
         {
             if (string.IsNullOrEmpty(firstName))
             {
                 throw new ValidationException("First Name was not specified. Please provide a first name.");
             }
+        }
+        public static void ValidateLastName(string lastName)
+        {
             if (string.IsNullOrEmpty(lastName))
             {
                 throw new ValidationException("Last Name was not specified. Please provide a last name.");
             }
+        }
+        public static void ValidateEmail(string email)
+        {
             if (string.IsNullOrEmpty(email))
             {
                 throw new ValidationException("Email was not specified. Please provide an email.");
             }
+        }
+        
 
+        public static void ValidateUserInfo(string firstName, string lastName, string email)
+        {
+            ValidateFirstName(firstName);
+            ValidateLastName(lastName);
+            ValidateEmail(email);
         }
     }
 
